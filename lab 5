@@ -1,0 +1,66 @@
+// John Carlo M. Liagon
+// September 29, 2024
+// Lab5: Retauran Order System
+
+import java.util.Scanner;
+
+class RestaurantOrderSystem {
+    public static void main(String[] args) {
+        
+        // Scanner to take user input with mune displayed 
+        Scanner mySystem = new Scanner(System.in);
+        System.out.println("Select a order that you want to order: ");
+        System.out.println("1. Burger    - PHP 100");
+        System.out.println("2. Fries     - PHP 50");
+        System.out.println("3. Soda      - PHP 30");
+        System.out.println("4. Ice Cream - PHP 45");
+        System.out.println("5. Exit");
+        System.out.print("Please select an option (1-5): ");
+
+        
+        // Variable for each item
+        int myChoice = mySystem.nextInt();
+        int burger, fries, soda, iceCream, quantity, totalAmount;
+        
+        // If statement for each individual
+            switch (myChoice) {
+                
+                
+                case 1:
+                    System.out.print("Enter the quality: ");
+                     quantity = mySystem.nextInt();
+                    System.out.println("You ordered Burger.");
+                    burger = 100;
+                     totalAmount = quantity * burger;
+                    System.out.println("Total amount: " + totalAmount + "PHP");
+                    break;
+                 case 2:
+                    System.out.print("Enter the quantity: ");
+                     quantity = mySystem.nextInt();
+                    System.out.println("You ordered Fries.");
+                    fries = 50;
+                    totalAmount = quantity * fries;
+                    System.out.println("Total amount F: " + totalAmount + "PHP");
+                    break;
+                 case 3:
+                    System.out.print("Enter the quantity: ");
+                    quantity = mySystem.nextInt();
+                    System.out.println("You ordered Soda.");
+                    soda = 30;
+                    totalAmount = quantity * soda;
+                    System.out.println("Total amount: " + totalAmount + "PHP");
+                    break;
+                 case 4:
+                    System.out.print("Enter the quatity: ");
+                    quantity = mySystem.nextInt();
+                    System.out.println("You ordered Ice Cream.");
+                    iceCream = 45;
+                    totalAmount = quantity * iceCream;
+                    System.out.println("Total amount: " + totalAmount + "PHP");
+                    break;
+                    
+                default:
+                System.out.println("Please enter a valid input");
+        }
+    }
+}
